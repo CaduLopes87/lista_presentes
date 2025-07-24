@@ -1,0 +1,21 @@
+<div class="presents-container">
+  <h2>Lista de Presentinhos</h2>
+  @for (presente of lista_presentes; track presente.nome) {
+  <div class="present-item">
+    <h3>{{ presente.nome }}</h3>
+    <img
+      [src]="presente.imagem"
+      alt="{{ presente.nome }}"
+      class="present-image"
+    />
+    <a
+      [href]="presente.link"
+      target="_blank"
+      class="present-btn"
+      [title]="presente.status"
+    >
+      Presentear
+    </a>
+  </div>
+  }
+</div>
