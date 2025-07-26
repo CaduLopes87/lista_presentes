@@ -92,11 +92,10 @@ export const lista_presentes: Array<IListaPresentes> = [
     status: 'disponível',
   },
   {
-    nome: 'Jogo de Banho',
+    nome: 'Jogo de Toalha de Banho',
     valor: 195,
     imagem:
-      'https://imgs.search.brave.com/RjDWRULk-Qn_sOjzYGUGSiKZlin3jML7M-_QGBwEHRc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudGNkbi5jb20u/YnIvaW1nL2ltZ19w/cm9kLzU0ODU5OS8x/ODBfa2l0X3Bhbm9f/ZGVfcHJhdG9zXzNf/cGVjYXNfYnJhbmNv/X2VfcHJldG9fNTA2/N18xXzdmM2JiYzkx/ZTAwNGMyMzg3ODI0/NjJmZTUyNzUwNzNh/XzIwMjQwMjI2MTMy/ODM0LmpwZw',
-    // '/assets/imagens-presentes/jogo-de-banho.jpg',
+    '/assets/imagens-presentes/jogo-de-banho.jpg',
     link: 'https://nubank.com.br/cobrar/1bn9q5/688434f9-63a3-4b89-8503-f69b3a722a3c',
     status: 'disponível',
   },
@@ -155,7 +154,7 @@ export const lista_presentes: Array<IListaPresentes> = [
     status: 'disponível',
   },
   {
-    nome: 'Kit 11 Potes de Vidro Com Tampa',
+    nome: 'Kit 11 Potes de Vidro Com Tampa de Bambu',
     valor: 184.9,
     imagem:
       'https://imgs.search.brave.com/RjDWRULk-Qn_sOjzYGUGSiKZlin3jML7M-_QGBwEHRc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudGNkbi5jb20u/YnIvaW1nL2ltZ19w/cm9kLzU0ODU5OS8x/ODBfa2l0X3Bhbm9f/ZGVfcHJhdG9zXzNf/cGVjYXNfYnJhbmNv/X2VfcHJldG9fNTA2/N18xXzdmM2JiYzkx/ZTAwNGMyMzg3ODI0/NjJmZTUyNzUwNzNh/XzIwMjQwMjI2MTMy/ODM0LmpwZw',
