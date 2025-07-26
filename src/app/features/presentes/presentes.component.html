@@ -8,14 +8,19 @@
       alt="{{ presente.nome }}"
       class="present-image"
     />
-    <a
-      [href]="presente.link"
-      target="_blank"
-      class="present-btn"
-      [title]="presente.status"
-    >
-      Presentear
-    </a>
+    <div class="present-action">
+      <span class="present-value">
+        {{ presente.valor | currency : "BRL" : "symbol" : "1.2-2" }}
+      </span>
+      <a
+        [href]="presente.link"
+        target="_blank"
+        class="present-btn"
+        [title]="presente.status"
+      >
+        Presentear
+      </a>
+    </div>
   </div>
   }
 </div>
