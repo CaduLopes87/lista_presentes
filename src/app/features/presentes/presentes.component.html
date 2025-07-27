@@ -1,7 +1,10 @@
 <div class="presents-container">
-  <h2>Lista de Presentinhos</h2>
+  <h2 class="lavishly-yours-regular">Lista de Presentinhos</h2>
   @for (presente of lista_presentes; track presente.nome) {
-  <div class="present-item">
+  <div
+    class="present-item"
+    [ngClass]="presente.status !== 'disponível' ? 'present-item-disabled' : ''"
+  >
     <span class="present-title">{{ presente.nome }}</span>
     <img
       [src]="presente.imagem"
@@ -12,15 +15,58 @@
       <span class="present-value">
         {{ presente.valor | currency : "BRL" : "symbol" : "1.2-2" }}
       </span>
-      <a
-        [href]="presente.link"
-        target="_blank"
+      <button
         class="present-btn"
-        [title]="presente.status"
+        matTooltip="Presentear"
+        (click)="
+          presente.status === 'disponível'
+            ? openSuccessDialog(presente)
+            : openSnackBarDisabledItem()
+        "
       >
         <mat-icon>card_giftcard</mat-icon>
-      </a>
+      </button>
     </div>
   </div>
   }
 </div>
+
+<ng-template #dialogSuccessTemplate class="dialog-success-template">
+  <img
+    [src]="selectedGift?.imagem"
+    [alt]="selectedGift?.nome"
+    class="present-dialog-image"
+  />
+  <h2 mat-dialog-title class="mat-typography">{{ selectedGift?.nome }}</h2>
+  <mat-dialog-content>
+    <p>Você escolheu presentear com {{ selectedGift?.nome }}!</p>
+    <p>
+      Para concluir, clique no botão "Presentear" para abrir o QR Code do
+      presente. Assim que identificarmos o envio do seu presente, iremos
+      atualizar a lista!
+    </p>
+    <p>
+      Valor: {{ selectedGift?.valor | currency : "BRL" : "symbol" : "1.2-2" }}
+    </p>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button
+      mat-button
+      mat-dialog-close
+      matTooltip="Fechar Presente"
+      class="present-btn close-btn"
+    >
+      Fechar
+    </button>
+    <button
+      matButton
+      [mat-dialog-close]="true"
+      cdkFocusInitial
+      class="present-btn"
+      matTooltip="Presentear"
+      (click)="openSelectedGiftLink()"
+    >
+      Presentear
+    </button>
+  </mat-dialog-actions>
+</ng-template>

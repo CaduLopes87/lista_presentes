@@ -7,6 +7,14 @@
   gap: 32px;
   padding: 20px;
   margin-top: 82px;
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+  }
 }
 
 .present-item {
@@ -27,6 +35,13 @@
   }
 }
 
+.present-item-disabled {
+  .present-image {
+    filter: grayscale(100%);
+    opacity: 0.75;
+  }
+}
+
 .present-image {
   border-radius: 12px;
   width: 100%;
@@ -38,6 +53,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  border-radius: 4px;
   background-color: wheat;
 }
 
@@ -54,8 +70,8 @@
   align-items: center;
   height: 32px;
   padding: 0 4px;
-
   font-size: small;
+  font-weight: bold;
   color: white;
   background-color: #55b758;
   border: none;
@@ -66,4 +82,18 @@
   &:hover {
     background-color: #45a049;
   }
+}
+
+.close-btn {
+  background-color: red;
+  margin-right: 8px;
+
+  &:hover {
+    background-color: rgb(207, 0, 0);
+  }
+}
+
+.present-dialog-image {
+  width: 100%;
+  height: auto;
 }
