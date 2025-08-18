@@ -5,7 +5,7 @@ import { CurrencyPipe, NgClass } from '@angular/common';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatTooltip } from '@angular/material/tooltip';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import {MatSnackBar} from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-presentes',
@@ -37,11 +37,9 @@ export class PresentesComponent implements OnInit {
 
   openSuccessDialog(selectedGift: IListaPresentes): void {
     this.selectedGift = selectedGift;
-    const dialogRef = this.dialog.open(this.dialogSuccessTemplate, 
-      {
-        data: selectedGift
-      }
-    );
+    const dialogRef = this.dialog.open(this.dialogSuccessTemplate, {
+      data: selectedGift,
+    });
     dialogRef.afterClosed().subscribe((result) => {
       this.selectedGift = null;
     });

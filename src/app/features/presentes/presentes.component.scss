@@ -40,6 +40,12 @@
     filter: grayscale(100%);
     opacity: 0.75;
   }
+
+  .present-action {
+    .present-btn {
+      background-color: brown;
+    }
+  }
 }
 
 .present-image {
@@ -91,6 +97,10 @@
   &:hover {
     background-color: rgb(207, 0, 0);
   }
+}
+
+.dialog-success-template {
+  max-width: 400px;
 }
 
 .present-dialog-image {
