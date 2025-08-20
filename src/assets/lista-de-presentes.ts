@@ -14,7 +14,7 @@ export const lista_presentes: Array<IListaPresentes> = [
     valor: 90,
     imagem: '/assets/imagens-presentes/mesa-de-cabeceira.jpg',
     link: 'https://nubank.com.br/cobrar/1bn9q5/68843046-230f-4ead-823b-b41b5742c3e3',
-    status: 'disponível',
+    status: 'indisponível',
   },
   {
     nome: 'Cortina para Janela',
