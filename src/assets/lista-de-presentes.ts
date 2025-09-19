@@ -147,7 +147,7 @@ export const lista_presentes: Array<IListaPresentes> = [
     valor: 300,
     imagem: '/assets/imagens-presentes/conjunto-de-panelas.jpg',
     link: 'https://nubank.com.br/cobrar/1bn9q5/68843ad3-35ac-4275-b7a3-3db9abc35a86',
-    status: 'disponível',
+    status: 'indisponível',
   },
   {
     nome: 'Tapete Para Sala',
