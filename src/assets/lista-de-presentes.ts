@@ -105,7 +105,7 @@ export const lista_presentes: Array<IListaPresentes> = [
     valor: 199,
     imagem: '/assets/imagens-presentes/kit-almofadas-manta-sofa.jpg',
     link: 'https://nubank.com.br/cobrar/1bn9q5/6884368f-5883-48d0-b8b8-2eaff76211c3',
-    status: 'disponível',
+    status: 'indisponível',
   },
   {
     nome: 'Tábua de Cortar + Panos de Prato',
