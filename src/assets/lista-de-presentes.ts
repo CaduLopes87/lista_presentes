@@ -56,7 +56,7 @@ export const lista_presentes: Array<IListaPresentes> = [
     valor: 100,
     imagem: '/assets/imagens-presentes/jogo-de-lencol.jpg',
     link: 'https://nubank.com.br/cobrar/1bn9q5/6884337a-2666-4b1e-b63d-b2765abeba6e',
-    status: 'disponível',
+    status: 'indisponível',
   },
   {
     nome: 'Passadeira à Vapor',
