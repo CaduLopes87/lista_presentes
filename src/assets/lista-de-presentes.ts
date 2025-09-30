@@ -161,7 +161,7 @@ export const lista_presentes: Array<IListaPresentes> = [
     valor: 65,
     imagem: '/assets/imagens-presentes/jogo-copos-de-vidro.jpg',
     link: 'https://nubank.com.br/cobrar/1bn9q5/68843eb8-1e10-46bc-8821-597658caf732',
-    status: 'disponível',
+    status: 'indisponível',
   },
   {
     nome: 'Abajour de Cabeceira',
