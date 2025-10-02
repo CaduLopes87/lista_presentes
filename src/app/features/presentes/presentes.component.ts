@@ -27,6 +27,7 @@ export class PresentesComponent implements OnInit {
   private _snackBar = inject(MatSnackBar);
 
   @ViewChild('dialogSuccessTemplate') dialogSuccessTemplate: any;
+  @ViewChild('paymentTemplate') paymentTemplate: any;
 
   lista_presentes: IListaPresentes[] = [];
   selectedGift: IListaPresentes | null = null;
@@ -40,18 +41,28 @@ export class PresentesComponent implements OnInit {
     const dialogRef = this.dialog.open(this.dialogSuccessTemplate, {
       data: selectedGift,
     });
+  }
+
+  openSelectedGiftLink(method: 'card' | 'pix') {
+    if (!this.selectedGift) {
+      console.error('Selected gift link is not available.');
+      return;
+    }
+
+    let link = '';
+
+    if (method === 'card') link = this.selectedGift.cardLink;
+    if (method === 'pix') link = this.selectedGift.pixLink;
+
+    window.open(link, '_blank');
+    this.openSnackBarSuccessGift();
+  }
+
+  openPaymentMethods() {
+    const dialogRef = this.dialog.open(this.paymentTemplate);
     dialogRef.afterClosed().subscribe((result) => {
       this.selectedGift = null;
     });
-  }
-
-  openSelectedGiftLink() {
-    if (this.selectedGift && this.selectedGift.link) {
-      window.open(this.selectedGift.link, '_blank');
-      this.openSnackBarSuccessGift();
-    } else {
-      console.error('Selected gift link is not available.');
-    }
   }
 
   openSnackBarSuccessGift() {

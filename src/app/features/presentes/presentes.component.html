@@ -65,9 +65,55 @@
         cdkFocusInitial
         class="present-btn"
         matTooltip="Presentear"
-        (click)="openSelectedGiftLink()"
+        (click)="openPaymentMethods()"
       >
         Presentear
+      </button>
+    </mat-dialog-actions>
+  </section>
+</ng-template>
+
+<ng-template #paymentTemplate>
+  <section class="payment-template">
+    <img
+      [src]="selectedGift?.imagem"
+      [alt]="selectedGift?.nome"
+      class="present-dialog-image"
+    />
+    <h2 mat-dialog-title class="mat-typography">{{ selectedGift?.nome }}</h2>
+    <h3 mat-dialog-title class="mat-typography">
+      Escolha o método de pagamento:
+    </h3>
+    <mat-dialog-content>
+      <div class="payment-container">
+        <article class="payment-box">
+          <button
+            class="payment-btn"
+            (click)="openSelectedGiftLink('card')"
+          >
+            <mat-icon>credit_card</mat-icon>
+          </button>
+          <span class="present-payment-name"><b>CARTÃO</b></span>
+        </article>
+        <article class="payment-box">
+          <button
+            class="payment-btn"
+            (click)="openSelectedGiftLink('pix')"
+          >
+            <i class="fa-brands fa-pix"></i>
+          </button>
+          <span class="present-payment-name"><b>PIX</b></span>
+        </article>
+      </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+      <button
+        mat-button
+        mat-dialog-close
+        matTooltip="Fechar Presente"
+        class="present-btn close-btn"
+      >
+        Fechar
       </button>
     </mat-dialog-actions>
   </section>

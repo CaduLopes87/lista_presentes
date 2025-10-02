@@ -2,6 +2,7 @@ export interface IListaPresentes {
     nome: string;
     valor: number;
     imagem: string;
-    link: string;
+    pixLink: string;
+    cardLink: string;
     status: string;
   };

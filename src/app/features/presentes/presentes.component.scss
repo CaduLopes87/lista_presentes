@@ -103,7 +103,60 @@
   max-width: 400px;
 }
 
+.payment-template {
+  max-width: 400px;
+}
+
 .present-dialog-image {
   width: 100%;
   height: auto;
+}
+
+.payment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.payment-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.payment-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  width: 72px;
+  padding: 0 4px;
+  font-size: xx-large;
+  font-weight: bold;
+  color: white;
+  background-color: #257af1;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+
+  mat-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    height: 64px;
+    width: 72px;
+  }
+
+  &:hover {
+    background-color: #45a049;
+  }
+}
+
+.present-payment-name {
 }
