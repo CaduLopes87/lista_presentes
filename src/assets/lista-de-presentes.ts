@@ -89,7 +89,7 @@ export const lista_presentes: Array<IListaPresentes> = [
     pixLink:
       'https://nubank.com.br/cobrar/1bn9q5/8843422-ca85-4647-8ec7-c31c37c418bb',
     cardLink: 'https://mpago.la/2zRXUkL',
-    status: 'disponível',
+    status: 'indisponível',
   },
   {
     nome: 'Tapete de Banheiro + Pano de chão',
@@ -224,7 +224,7 @@ export const lista_presentes: Array<IListaPresentes> = [
     pixLink:
       'https://nubank.com.br/cobrar/1bn9q5/68856b8e-b1ce-45c6-b052-264452a61e0e',
     cardLink: 'https://mpago.la/1GVsCTV',
-    status: 'disponível',
+    status: 'indisponível',
   },
   {
     nome: 'Cortina de Porta',
